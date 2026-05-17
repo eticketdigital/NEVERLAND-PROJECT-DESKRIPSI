@@ -188,7 +188,7 @@ margin-bottom:18px;
 /* QUANTITY */
 
 .quantity-box{
-display:none;
+display:flex;
 align-items:center;
 justify-content:flex-end;
 gap:12px;
@@ -402,7 +402,7 @@ Artatix
 EARLY BIRD FESTIVAL
 </div>
 
-<div class="status onsale" onclick="toggleQty('qtyFestival')">
+<div class="status onsale">
 On Sale
 </div>
 
@@ -444,7 +444,7 @@ Tiket festival reguler dengan akses masuk ke area konser Neverland Bandung.
 EARLY BIRD VIP
 </div>
 
-<div class="status onsale" onclick="toggleQty('qtyVIP')">
+<div class="status onsale">
 On Sale
 </div>
 
@@ -525,18 +525,6 @@ let vipQty = 0;
 
 const festivalPrice = 100000;
 const vipPrice = 150000;
-
-function toggleQty(id){
-
-const box = document.getElementById(id);
-
-if(box.style.display === 'flex'){
-box.style.display = 'none';
-}else{
-box.style.display = 'flex';
-}
-
-}
 
 function changeQty(type,change){
 
